@@ -7,22 +7,28 @@ import scissor from "../../assets/icon-scissors.svg";
 import { useGlobalContext } from "../../context";
 
 const RPS = ({ name }) => {
-	const { setUserChoice, randomChoice } = useGlobalContext();
+	const { setUserChoice, randomChoice, winner, result } = useGlobalContext();
 	const item = rps_data.filter((item) => item.name === name)[0];
 	return (
-		<Wrapper
-			{...item}
-			onClick={() => {
-				setUserChoice(item.name);
-				randomChoice();
-			}}
-		>
-			<Image
-				src={
-					name === "rock" ? rock : name === "paper" ? paper : scissor
-				}
-			/>
-		</Wrapper>
+		<div className={name === winner && result ? "s" : ""}>
+			<Wrapper
+				{...item}
+				onClick={() => {
+					setUserChoice(item.name);
+					randomChoice();
+				}}
+			>
+				<Image
+					src={
+						name === "rock"
+							? rock
+							: name === "paper"
+							? paper
+							: scissor
+					}
+				/>
+			</Wrapper>
+		</div>
 	);
 };
 

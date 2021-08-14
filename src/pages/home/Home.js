@@ -10,17 +10,14 @@ import { Wrapper } from "./Home.style";
 const Home = () => {
 	const { showRules, houseChoice } = useGlobalContext();
 
-	if (showRules) {
-		return <RulesPage />;
-	} else {
-		return (
-			<Wrapper>
-				<Header />
-				{houseChoice ? <Result /> : <CenterRPS />}
-				<Rules />
-			</Wrapper>
-		);
-	}
+	return (
+		<Wrapper>
+			{showRules ? <RulesPage /> : ""}
+			<Header />
+			{houseChoice ? <Result /> : <CenterRPS />}
+			<Rules />
+		</Wrapper>
+	);
 };
 
 export default Home;

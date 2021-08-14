@@ -8,6 +8,9 @@ export const Wrapper = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	max-height: 150px;
+	max-width: 700px;
+	width: 100%;
+	margin: 0 auto;
 `;
 
 export const Image = styled.img`
@@ -20,6 +23,8 @@ export const Score = styled.div`
 	background-color: white;
 	padding: 15px 30px;
 	border-radius: 5px;
+	width: 30%;
+	max-width: 120px;
 
 	h2 {
 		font-size: 0.9rem;

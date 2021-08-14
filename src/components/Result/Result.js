@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGlobalContext } from "../../context";
 import RPS from "../RPS/RPS";
 import { Container, Wrapper } from "./Result.style";
 
 const Result = () => {
-	const { setUserChoice, setHouseChoice, result, houseChoice, userChoice } =
-		useGlobalContext();
+	const {
+		setUserChoice,
+		setHouseChoice,
+		result,
+		houseChoice,
+		userChoice,
+		setResult,
+	} = useGlobalContext();
 	return (
 		<Wrapper>
 			<Container>
@@ -22,6 +28,7 @@ const Result = () => {
 					onClick={() => {
 						setHouseChoice("");
 						setUserChoice("");
+						setResult("");
 					}}
 				>
 					Play Again

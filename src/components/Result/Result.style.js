@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-	/* display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	position: relative; */
-
 	display: grid;
 	position: relative;
 	grid-template-columns: 1fr 1fr 1fr;
 	align-content: space-between;
 	height: 300px;
+	margin: 0 auto;
+
+	@media (min-width: 768px) {
+		margin-bottom: 150px;
+	}
 `;
 
 export const Image = styled.img`
@@ -66,5 +66,21 @@ export const Container = styled.div`
 		margin: 30px 0;
 		text-transform: uppercase;
 		width: max-content;
+	}
+
+	@media (min-width: 768px) {
+		&:nth-child(2) {
+			grid-column: 3/4;
+		}
+		&:nth-child(1) {
+			grid-column: 1/2;
+			pointer-events: none;
+		}
+		&:nth-child(3) {
+			grid-column: 2/3;
+			grid-row: 1/2;
+			align-self: center;
+			margin: 0 50px;
+		}
 	}
 `;

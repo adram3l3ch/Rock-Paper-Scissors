@@ -20,4 +20,10 @@ export const Wrapper = styled.div`
 		letter-spacing: 0.2em;
 		cursor: pointer;
 	}
+
+	@media (min-width: 768px) {
+		position: absolute;
+		bottom: 5%;
+		right: 5%;
+	}
 `;

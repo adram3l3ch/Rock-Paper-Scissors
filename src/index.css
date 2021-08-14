@@ -13,6 +13,21 @@ body {
 	font-family: "Barlow Semi Condensed", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	transition: all 0.2s linear;
+}
+
+.s {
+	animation: bubble 1s;
+	border-radius: 50%;
+}
+
+@keyframes bubble {
+	0% {
+		box-shadow: 0 0 0 0 #0000;
+	}
+	100% {
+		box-shadow: 0 0 0 30px #fff1, 0 0 0 60px #fff1, 0 0 0 90px #fff1;
+	}
 }
 
 code {

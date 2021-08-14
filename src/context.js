@@ -9,40 +9,34 @@ const AppProvider = ({ children }) => {
 	const [houseChoice, setHouseChoice] = useState("");
 	const [showRules, setShowRules] = useState(false);
 	const [result, setResult] = useState("");
+	const [winner, setWinner] = useState("");
 
 	const randomChoice = () => {
 		const random = Math.floor(Math.random() * 3);
 		setHouseChoice(rps_data[random].name);
 	};
 
-	const findResult = () => {
-		const user = rps_data.filter((data) => data.name === userChoice)[0];
-		if (user) {
-			if (userChoice === houseChoice) {
-				setResult("Draw");
-			} else if (user.enemy === houseChoice) {
-				setResult("You lost");
-				if (score > 0) {
-					setScore(score - 1);
-				}
-			} else {
-				setResult("You win");
-				setScore(score + 1);
-			}
-		}
-	};
 	useEffect(() => {
-		setScore(+localStorage.getItem("score"));
-	}, []);
-
-	useEffect(
-		() => {
-			findResult();
-			localStorage.setItem("score", score);
-		},
-		[houseChoice],
-		[userChoice]
-	);
+		const findResult = () => {
+			const user = rps_data.filter((data) => data.name === userChoice)[0];
+			if (user) {
+				if (userChoice === houseChoice) {
+					setResult("Draw");
+				} else if (user.enemy === houseChoice) {
+					setResult("You lost");
+					setWinner(houseChoice);
+					if (score > 0) {
+						setScore((score) => score - 1);
+					}
+				} else {
+					setResult("You win");
+					setWinner(userChoice);
+					setScore((score) => score + 1);
+				}
+			}
+		};
+		findResult();
+	}, [userChoice, houseChoice]);
 
 	return (
 		<AppContext.Provider
@@ -56,7 +50,8 @@ const AppProvider = ({ children }) => {
 				result,
 				houseChoice,
 				randomChoice,
-				findResult,
+				winner,
+				setResult,
 			}}
 		>
 			{children}
