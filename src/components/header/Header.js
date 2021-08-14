@@ -7,7 +7,7 @@ const Header = () => {
 	const { score } = useGlobalContext();
 	return (
 		<Wrapper>
-			<Image src={Logo} />
+			<Image src={Logo} alt="logo" />
 			<Score>
 				<h2>Score</h2>
 				<p>{score}</p>

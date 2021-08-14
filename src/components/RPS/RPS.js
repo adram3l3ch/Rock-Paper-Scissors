@@ -26,6 +26,7 @@ const RPS = ({ name }) => {
 							? paper
 							: scissor
 					}
+					alt={name}
 				/>
 			</Wrapper>
 		</div>

@@ -10,11 +10,11 @@ const RulesPage = () => {
 		<Shadow>
 			<Wrapper>
 				<h1>Rules</h1>
-				<img src={rules} alt="" className="rule" />
+				<img src={rules} alt="rule" className="rule" />
 				<button>
 					<img
 						src={close}
-						alt=""
+						alt="close-btn"
 						onClick={() => {
 							setShowRules(false);
 						}}
