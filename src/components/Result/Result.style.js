@@ -11,10 +11,6 @@ export const Wrapper = styled.div`
 	grid-template-columns: 1fr 1fr 1fr;
 	align-content: space-between;
 	height: 300px;
-
-	RPS::nth-child(2) {
-		justify-self: flex-end;
-	}
 `;
 
 export const Image = styled.img`
@@ -22,7 +18,6 @@ export const Image = styled.img`
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: -2;
 	width: 80%;
 	height: 70%;
 `;
@@ -37,9 +32,11 @@ export const Container = styled.div`
 	&:nth-child(2) {
 		justify-self: center;
 		grid-column: 3/4;
+		pointer-events: none;
 	}
 	&:nth-child(1) {
 		grid-column: 1/2;
+		pointer-events: none;
 	}
 	&:nth-child(3) {
 		grid-column: 1/4;
@@ -60,6 +57,7 @@ export const Container = styled.div`
 		text-transform: uppercase;
 		color: hsl(229, 25%, 31%);
 		letter-spacing: 0.2em;
+		cursor: pointer;
 	}
 
 	p {

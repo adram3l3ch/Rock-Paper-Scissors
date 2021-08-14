@@ -11,10 +11,6 @@ export const Wrapper = styled.div`
 	grid-template-columns: 1fr 1fr 1fr;
 	align-content: space-between;
 	height: 300px;
-
-	RPS::nth-child(2) {
-		justify-self: flex-end;
-	}
 `;
 
 export const Image = styled.img`
@@ -22,9 +18,9 @@ export const Image = styled.img`
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: -2;
 	width: 80%;
 	height: 70%;
+	pointer-events: none;
 `;
 
 export const Container = styled.div`

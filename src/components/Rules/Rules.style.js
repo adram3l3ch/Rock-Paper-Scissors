@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
 	width: fit-content;
 	margin: 0 auto;
 	cursor: pointer;
+	z-index: 5;
 
 	button {
 		font-size: 1rem;
@@ -17,5 +18,6 @@ export const Wrapper = styled.div`
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.2em;
+		cursor: pointer;
 	}
 `;

@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
 		hsl(237, 49%, 15%)
 	);
 	position: relative;
-	z-index: -2;
 	padding: 50px;
 	display: flex;
 	flex-direction: column;
