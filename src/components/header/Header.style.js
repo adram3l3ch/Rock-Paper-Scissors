@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
 	max-width: 700px;
 	width: 100%;
 	margin: 0 auto;
+
+	@media (min-width: 768px) {
+		margin-bottom: 50px;
+	}
 `;
 
 export const Image = styled.img`

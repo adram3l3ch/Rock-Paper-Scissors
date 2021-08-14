@@ -36,6 +36,7 @@ const AppProvider = ({ children }) => {
 			}
 		};
 		findResult();
+		// eslint-disable-next-line
 	}, [userChoice, houseChoice]);
 
 	return (
