@@ -13,7 +13,6 @@ body {
 	font-family: "Barlow Semi Condensed", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	transition: all 0.2s linear;
 }
 
 .s {
@@ -25,7 +24,7 @@ body {
 	0% {
 		box-shadow: 0 0 0 0 #0000;
 	}
-	100% {
+	90% {
 		box-shadow: 0 0 0 30px #fff1, 0 0 0 60px #fff1, 0 0 0 90px #fff1;
 	}
 }
