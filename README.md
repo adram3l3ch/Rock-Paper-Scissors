@@ -12,7 +12,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [Github](https://github.com/adram3l3ch/Rock-Paper-Scissors)
--   Live Site URL: [Netlify](https://your-live-site-url.com)
+-   Live Site URL: [Netlify](https://adramelech-rock-paper-scissors.netlify.app/)
 
 ### Built with
 
