@@ -8,9 +8,18 @@ export const Wrapper = styled.div`
 		hsl(214, 47%, 23%),
 		hsl(237, 49%, 15%)
 	);
+`;
+export const Container = styled.div`
+	width: 100%;
+	height: 85vh;
+	max-height: 900px;
 	position: relative;
 	padding: 50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+
+	@media (max-width: 768px) {
+		padding: 50px 10px;
+	}
 `;

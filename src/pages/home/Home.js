@@ -5,16 +5,18 @@ import Result from "../../components/Result/Result";
 import Rules from "../../components/Rules/Rules";
 import { useGlobalContext } from "../../context";
 import RulesPage from "../RulesPage/RulesPage";
-import { Wrapper } from "./Home.style";
+import { Container, Wrapper } from "./Home.style";
 
 const Home = () => {
 	const { showRules, houseChoice } = useGlobalContext();
 
 	return (
 		<Wrapper>
-			{showRules ? <RulesPage /> : ""}
-			<Header />
-			{houseChoice ? <Result /> : <CenterRPS />}
+			<Container>
+				{showRules ? <RulesPage /> : ""}
+				<Header />
+				{houseChoice ? <Result /> : <CenterRPS />}
+			</Container>
 			<Rules />
 		</Wrapper>
 	);

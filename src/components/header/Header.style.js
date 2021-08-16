@@ -19,6 +19,10 @@ export const Wrapper = styled.div`
 
 export const Image = styled.img`
 	height: 100%;
+
+	@media (max-width: 375px) {
+		height: 80%;
+	}
 `;
 
 export const Score = styled.div`
@@ -41,5 +45,10 @@ export const Score = styled.div`
 		font-size: 3rem;
 		font-weight: 700;
 		color: hsl(229, 25%, 31%);
+	}
+
+	@media (max-width: 375px) {
+		padding: 15px 10px;
+		width: 40%;
 	}
 `;
