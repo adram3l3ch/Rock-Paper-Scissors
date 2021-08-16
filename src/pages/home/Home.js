@@ -12,8 +12,8 @@ const Home = () => {
 
 	return (
 		<Wrapper>
+			{showRules ? <RulesPage /> : ""}
 			<Container>
-				{showRules ? <RulesPage /> : ""}
 				<Header />
 				{houseChoice ? <Result /> : <CenterRPS />}
 			</Container>

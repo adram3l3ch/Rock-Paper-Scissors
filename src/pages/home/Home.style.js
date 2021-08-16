@@ -11,8 +11,8 @@ export const Wrapper = styled.div`
 `;
 export const Container = styled.div`
 	width: 100%;
-	height: 85vh;
-	max-height: 900px;
+	height: 90vh;
+	max-height: 1000px;
 	position: relative;
 	padding: 50px;
 	display: flex;
