@@ -26,7 +26,7 @@ const Result = () => {
 			</Container>
 			<Container>
 				<h1>{result}</h1>
-				<audio src={result == "You win" ? win : lose} autoPlay></audio>
+				<audio src={result === "You win" ? win : lose} autoPlay></audio>
 				<button
 					onClick={() => {
 						setHouseChoice("");
