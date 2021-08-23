@@ -2,6 +2,8 @@ import React from "react";
 import { useGlobalContext } from "../../context";
 import RPS from "../RPS/RPS";
 import { Container, Wrapper } from "./Result.style";
+import win from "../../assets/cash.mp3";
+import lose from "../../assets/aww.mp3";
 
 const Result = () => {
 	const {
@@ -24,6 +26,7 @@ const Result = () => {
 			</Container>
 			<Container>
 				<h1>{result}</h1>
+				<audio src={result == "You win" ? win : lose} autoPlay></audio>
 				<button
 					onClick={() => {
 						setHouseChoice("");
